@@ -1,0 +1,11 @@
+getallquestions   ---->1 get all questions           -------->get
+addquestion       ---->2 add question                -------->post   
+getquestions      ---->3 get question with answer with indicator    -------->post ---->  { currentLessonId, indicator, domain, subDomain, concept, complexity, activityCategories } = req.body
+
+
+
+ 
+base url:    localhost:3000/question/
+
+
+

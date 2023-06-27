@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "c2dffc04-4da4-4833-bcb7-971025d9ab22",
+		"name": "projectDataBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24502609"
+	},
+	"item": [
+		{
+			"name": "energy",
+			"item": [
+				{
+					"name": "addEnergy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"rotational energy\",\r\n\"characteristics\": [\r\n\"In physics, energy is measured in units of Joules. Rotational kinetic energy follows the same convention and is calculated in units of Joules\",\r\n\"Any object that moves has kinetic energy. If an object moves in a circular motion is has rotational kinetic energy that is given by the formula KE_rotational = Iw^2 where I is the moment of inertia of the object, and w is the angular velocity of the object\",\r\n\"To calculate rotational kinetic energy, both the moment of inertia of the object in motion and its angular velocity must be known\",\r\n\"Angular velocity can be calculated from linear velocity with the equation w = r/v where w is the angular velocity, r is the radius, and v is the velocity. The moment of inertia can be looked up.\"\r\n],\r\n\"definition\": \"Rotational Energy is the energy an object possesses when it is rotating, Rotational kinetic energy is related to rotational motion, and it is part of the total kinetic energy of an object .\",\r\n\"examples\": [\r\n\"A rolling tire\",\r\n\"A spinning electron\",\r\n\"A car driving over a hill\"\r\n],\r\n\"children_IDs\": [],\r\n\"parentName\": \"kinetik\",\r\n\"domain\": \"science\",\r\n\"subDomain\": \"physics\",\r\n\"level\": 3,\r\n\"concept\": \"energy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/energy/addenergy",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"energy",
+								"addenergy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEnergy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lessonNumber\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/energy/updateenergy/rotational",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"energy",
+								"updateenergy",
+								"rotational"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEnergy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/energy/deleteenergy/rotational",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"energy",
+								"deleteenergy",
+								"rotational"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update many",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"level\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/energy/updateenergy/energy",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"energy",
+								"updateenergy",
+								"energy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lesson",
+			"item": [
+				{
+					"name": "addLesson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lessonName\":\"lesson four\",\r\n    \"lessonNumber\":4,\r\n   \"nodes\":[\"rotational energy\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/addlesson",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"addlesson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLessonNameOrNumber",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"lessonName\":\"lesson four\",\r\n    \"lessonNumber\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/updatelessonnameornumber/lesson five",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"updatelessonnameornumber",
+								"lesson five"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLesson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/lesson/deletelesson/lesson five",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"deletelesson",
+								"lesson five"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNodes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodes\":[\"kinetic energy\",\"thermal energy\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/addnodes/lesson five",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"addnodes",
+								"lesson five"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteNodeFromLesson",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NodeName\":\"energy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/deletenodefromlesson/lesson five",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"deletenodefromlesson",
+								"lesson five"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLessonByNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/getlessonbynumber",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"getlessonbynumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLessonByID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"645e9aaa430e3d4e933b3c1a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/getlessonbyid",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"getlessonbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gettwolessonbynumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number1\":1,\r\n    \"number2\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/gettwolessonbynumber",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"gettwolessonbynumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gettwolessonbyID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id2\":\"645e9b92430e3d4e933b3c24\",\r\n    \"id1\":\"645e9b47430e3d4e933b3c1f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/gettwolessonbyid",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"gettwolessonbyid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gettwolessonbyidandindicator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentLessonId\":\"645efbfe0eafd081b859e704\",\r\n    \"indicator\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/lesson/gettwolessonbyidandindicator",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"lesson",
+								"gettwolessonbyidandindicator"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
